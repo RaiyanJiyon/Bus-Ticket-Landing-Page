@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Ticket Landing Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google font family added -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -251,8 +255,7 @@
             </div>
 
             <!-- bus details -->
-            <div
-                class="flex flex-col md:flex-row border border-red-500 justify-between w-11/12 mx-auto mt-12 bg-white rounded-3xl">
+            <div class="flex flex-col md:flex-row justify-between w-11/12 mx-auto mt-12 bg-white rounded-3xl">
                 <!-- route and departure time -->
                 <div class="w-full lg:w-[70%] p-8 space-y-6">
                     <!-- content -->
@@ -275,7 +278,7 @@
                             40 Seats left
                         </button>
                     </div>
-                    
+
                     <!-- details form -->
                     <div class="card border rounded-3xl bg-[#F7F8F8] space-y-6 p-8">
                         <!-- bus route -->
@@ -332,6 +335,283 @@
                     </div>
                 </div>
             </div>
+
+
+            <!-- booking seat -->
+            <section class="grid grid-cols-3 w-11/12 mx-auto mt-12 mb-12 bg-white rounded-3xl">
+                <!-- select seat 1 -->
+                <div class="col-span-2 p-8">
+                    <!-- content -->
+                    <div class="space-y-4">
+                        <h3 class="text-raleway font-semibold text-xl">
+                            Select Your Seat
+                        </h3>
+                        <!-- dotted divider -->
+                        <div class="border-dashed border border-[#03071233]"></div>
+                        <!-- available and selected -->
+                        <div class="flex justify-between">
+                            <!-- available -->
+                            <div class="flex justify-center items-center gap-1">
+                                <img src="images/seat-gray.png" alt="seat png">
+                                <p class="text-description text-sm">
+                                    Available
+                                </p>
+                            </div>
+                            <!-- selected -->
+                            <div class="flex justify-center items-center gap-1">
+                                <img src="images/seat-green-filled.png" alt="seat png">
+                                <p class="text-description text-sm">
+                                    Selected
+                                </p>
+                            </div>
+                        </div>
+                        <!-- dotted divider -->
+                        <div class="border-dashed border border-[#03071233]"></div>
+                    </div>
+
+                    <!-- seat buttons -->
+                    <div class="grid grid-cols-12 gap-8 items-center mt-6">
+                        <!-- front seat -->
+                        <div class="col-span-1"></div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <p class="col-span-2"></p>
+                            <p class="col-span-2"></p>
+                            <p class="col-span-2"></p>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">
+                                <img src="images/wheel.png" alt="">
+                            </button>
+                        </div>
+
+                        <!-- row 1 -->
+                        <div class="col-span-1">A</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">A1</button>
+                            <button class="btn col-span-2">A2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">A3</button>
+                            <button class="btn col-span-2">A4</button>
+                        </div>
+
+                        <!-- row 2 -->
+                        <div class="col-span-1">B</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">B1</button>
+                            <button class="btn col-span-2">B2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">B3</button>
+                            <button class="btn col-span-2">B4</button>
+                        </div>
+
+                        <!-- row 3 -->
+                        <div class="col-span-1">C</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">C1</button>
+                            <button class="btn col-span-2">C2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">C3</button>
+                            <button class="btn col-span-2">C4</button>
+                        </div>
+
+                        <!-- row 4 -->
+                        <div class="col-span-1">D</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">D1</button>
+                            <button class="btn col-span-2">D2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">D3</button>
+                            <button class="btn col-span-2">D4</button>
+                        </div>
+
+                        <!-- row 5 -->
+                        <div class="col-span-1">E</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">E1</button>
+                            <button class="btn col-span-2">E2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">E3</button>
+                            <button class="btn col-span-2">E4</button>
+                        </div>
+
+                        <!-- row 6 -->
+                        <div class="col-span-1">F</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">F1</button>
+                            <button class="btn col-span-2">F2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">F3</button>
+                            <button class="btn col-span-2">F4</button>
+                        </div>
+
+                        <!-- row 7 -->
+                        <div class="col-span-1">G</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">G1</button>
+                            <button class="btn col-span-2">G2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">G3</button>
+                            <button class="btn col-span-2">G4</button>
+                        </div>
+
+                        <!-- row 8 -->
+                        <div class="col-span-1">H</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">H1</button>
+                            <button class="btn col-span-2">H2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">H3</button>
+                            <button class="btn col-span-2">H4</button>
+                        </div>
+
+                        <!-- row 9 -->
+                        <div class="col-span-1">I</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">I1</button>
+                            <button class="btn col-span-2">I2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">I3</button>
+                            <button class="btn col-span-2">I4</button>
+                        </div>
+
+                        <!-- row 10 -->
+                        <div class="col-span-1">J</div>
+                        <div class="col-span-11 grid grid-cols-10 gap-8">
+                            <button class="btn col-span-2">J1</button>
+                            <button class="btn col-span-2">J2</button>
+                            <p class="col-span-2"></p>
+                            <button class="btn col-span-2">J3</button>
+                            <button class="btn col-span-2">J4</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- select seat 2 -->
+                <div class="col-span-1 p-8">
+                    <!-- content -->
+                    <div class="space-y-4">
+                        <h3 class="text-raleway font-semibold text-xl">
+                            Select Your Seat
+                        </h3>
+                        <!-- dotted divider -->
+                        <div class="border-dashed border border-[#03071233]"></div>
+
+                        <!-- details form -->
+                        <div class="card border rounded-3xl bg-[#F7F8F8] space-y-6 p-8">
+                            <!-- seat -->
+                            <div class="flex justify-between">
+                                <h4 class="font-semibold">
+                                    Seat <sup class="w-6 h-4 p-1 rounded-md bg-primary-color text-white">0</sup>
+                                </h4>
+                                <h4 class="font-semibold">
+                                    Class
+                                </h4>
+                                <h4 class="font-semibold">
+                                    Price
+                                </h4>
+                            </div>
+
+                            <!-- dotted divider -->
+                            <div class="border-dashed border border-[#03071233]"></div>
+
+                            <!-- economy -->
+                            <div class="flex justify-between">
+                                <p class="text-raleway text-description">
+                                    C2
+                                </p>
+                                <p class="text-raleway text-description">
+                                    Economy
+                                </p>
+                                <p class="text-raleway text-description">
+                                    550
+                                </p>
+                            </div>
+
+                            <!-- economy -->
+                            <div class="flex justify-between">
+                                <p class="text-raleway text-description">
+                                    C2
+                                </p>
+                                <p class="text-raleway text-description">
+                                    Economy
+                                </p>
+                                <p class="text-raleway text-description">
+                                    550
+                                </p>
+                            </div>
+
+                            <!-- dotted divider -->
+                            <div class="border border-[#03071233]"></div>
+
+                            <!-- total price-->
+                            <div class="flex justify-between">
+                                <h4 class="font-semibold">
+                                    Total Price
+                                </h4>
+                                <h4 class="font-semibold">
+                                    BDT 1100
+                                </h4>
+                            </div>
+
+                            <!-- coupon -->
+                            <div class="grid grid-cols-3 justify-between gap-4">
+                                <label class="col-span-2 input input-bordered flex items-center gap-2">
+                                    <input type="text" class="grow text-xs placeholder-gray-400"
+                                        placeholder="Have any coupon?" />
+                                </label>
+                                <button class="col-span-1 btn bg-primary-color text-white font-semibold">Apply</button>
+                            </div>
+
+                            <!-- grand total -->
+                            <div class="flex justify-between">
+                                <h4 class="font-semibold">
+                                    Grand Total
+                                </h4>
+                                <h4 class="font-semibold">
+                                    BDT 1100
+                                </h4>
+                            </div>
+
+                            <!-- form -->
+                            <form class="space-y-4">
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text font-bold">Passenger Name*</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your name"
+                                        class="input input-bordered w-full max-w-xs" />
+                                </label>
+                                <label class="form-control w-full max-w-xs text-sm">
+                                    <div class="label">
+                                        <span class="label-text font-bold">Phone Number*</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your phone number"
+                                        class="input input-bordered w-full max-w-xs text-sm" />
+                                </label>
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text font-bold">Email ID</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your email id"
+                                        class="input input-bordered w-full max-w-xs text-sm" />
+                                </label>
+
+                                <button
+                                    class="btn w-full bg-primary-color text-white font-bold rounded-2xl">Next</button>
+
+                                <div class="flex justify-between">
+                                    <p class="text-xs text-description">
+                                        Terms and Conditions
+                                    </p>
+                                    <p class="text-xs text-description">
+                                        Cancellation Policy
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
     <!-- main container ends here -->
