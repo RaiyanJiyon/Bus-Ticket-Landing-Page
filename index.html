@@ -24,6 +24,7 @@
                         description: '#03071299',
                         'card1-background': '#FFBF0F',
                         'card2-background': '#F78C9C',
+                        'ticket-background': '#F7F8F8',
                     },
                     fontFamily: {
                         'raleway': ['Raleway', 'sans-seri'],
@@ -117,7 +118,7 @@
         <div
             class="flex flex-col md:flex-row justify-evenly relative md:-top-10 md:z-10 mt-10 md:mt-0 space-y-8 md:space-y-0">
             <!-- box 1 -->
-            <div class="card border border-b-4 border-b-green-500 rounded-3xl w-11/12 mx-auto md:w-[30%] bg-white">
+            <div class="card border border-b-4 border-b-primary-color rounded-3xl w-11/12 mx-auto md:w-[30%] bg-white">
                 <div class="card-body flex-row justify-center items-center gap-4">
                     <!-- icon -->
                     <div>
@@ -131,7 +132,7 @@
                 </div>
             </div>
             <!-- box 2 -->
-            <div class="card border border-b-4 border-b-green-500 rounded-3xl w-11/12 mx-auto md:w-[30%] bg-white">
+            <div class="card border border-b-4 border-b-primary-color rounded-3xl w-11/12 mx-auto md:w-[30%] bg-white">
                 <div class="card-body flex-row justify-center items-center gap-4">
                     <!-- icon -->
                     <div>
@@ -145,7 +146,7 @@
                 </div>
             </div>
             <!-- box 3 -->
-            <div class="card border border-b-4 border-b-green-500 rounded-3xl w-11/12 mx-auto md:w-[30%] bg-white">
+            <div class="card border border-b-4 border-b-primary-color rounded-3xl w-11/12 mx-auto md:w-[30%] bg-white">
                 <div class="card-body flex-row justify-center items-center gap-4">
                     <!-- icon -->
                     <div>
@@ -235,11 +236,108 @@
         <div class="flex justify-center mt-10">
             <button class="btn border border-primary-color text-primary-color bg-white">See All Offers</button>
         </div>
+
+        <!-- ticket section -->
+        <section class="w-full mt-14 md:mt-20 border border-t border-t-green-500 rounded-t-[88px] bg-ticket-background">
+            <!-- ticket section content -->
+            <div class="w-1/2 mx-auto mt-14 md:mt-20 text-center space-y-4">
+                <h2 class="font-raleway text-3xl font-bold">
+                    P.H Paribahan
+                </h2>
+                <p class="font-inter text-paragraph">
+                    Yes, you can run unit tests and view the results directly within the app. The integrated testing
+                    features allow for a streamlined .
+                </p>
+            </div>
+
+            <!-- bus details -->
+            <div
+                class="flex flex-col md:flex-row border border-red-500 justify-between w-11/12 mx-auto mt-12 bg-white rounded-3xl">
+                <!-- route and departure time -->
+                <div class="w-full lg:w-[70%] p-8 space-y-6">
+                    <!-- content -->
+                    <div class="flex flex-col sm:flex-row  justify-between items-center">
+                        <div class="flex flex-col items-center text-center sm:flex-row justify-center gap-3">
+                            <div>
+                                <img src="images/bus-logo.png" alt="bus logo">
+                            </div>
+                            <div>
+                                <h2 class="text-raleway text-2xl font-bold">
+                                    Greenline Paribahan
+                                </h2>
+                                <p class="text-description">
+                                    Coach-009-WEB ! AC_Business
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn bg-[#1DD10026] text-primary-color mt-6 sm:mt-0">
+                            <img src="images/seat-green.png" alt="seat png">
+                            40 Seats left
+                        </button>
+                    </div>
+                    
+                    <!-- details form -->
+                    <div class="card border rounded-3xl bg-[#F7F8F8] space-y-6 p-8">
+                        <!-- bus route -->
+                        <div class="flex justify-between">
+                            <p class="text-raleway text-description">
+                                Route
+                            </p>
+                            <h4 class="font-semibold">
+                                Dhaka - Sylhet
+                            </h4>
+                        </div>
+                        <!-- dotted divider -->
+                        <div class="border-dashed border border-[#03071233]"></div>
+                        <!-- bus time -->
+                        <div class="flex justify-between">
+                            <p class="text-raleway text-description">
+                                Departure Time
+                            </p>
+                            <h4 class="font-semibold">
+                                9:00 PM
+                            </h4>
+                        </div>
+                        <!-- dotted divider -->
+                        <div class="border-dashed border border-[#03071233]"></div>
+                        <!-- buttons -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            <button class="btn">Boarding Point - Laxmipur</button>
+                            <button class="btn">Est. Time - 11 Hour</button>
+                            <button class="btn">Dropping Point - Bogura</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- middle image -->
+                <div class="hidden lg:block">
+                    <img src="images/info-devider.png" alt="ticket image">
+                </div>
+
+                <!-- amount -->
+                <div class="hidden lg:flex flex-col items-center justify-center pr-16">
+                    <!-- amount logo -->
+                    <div>
+                        <img src="images/fare.png" alt="amount logo">
+                    </div>
+                    <!-- content -->
+                    <div>
+                        <h2 class="text-raleway font-bold text-xl">
+                            550 Taka
+                        </h2>
+                        <p class="text-description font-semibold">
+                            Per Seat
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- main container ends here -->
 
     <!-- footer container starts here -->
-    <footer class="bg-black mt-20">
+    <footer class="hidden bg-black mt-20">
         <!-- footer content -->
         <div class="w-11/12 mx-auto ">
             <!-- footer upper content -->
