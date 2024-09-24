@@ -21,23 +21,21 @@
                     colors: {
                         clifford: '#da373d',
                         description: '#03071299',
+                        'card1-background': '#FFBF0F',
+                        'card2-background': '#F78C9C',
+                    },
+                    fontFamily: {
+                        'raleway': ['Raleway', 'sans-seri'],
+                        'inter': ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <style>
-        .font-raleway {
-            font-family: "Raleway", sans-serif;
-        }
-
-        .font-inter {
-            font-family: "Inter", sans-serif;
-        }
-    </style>
 </head>
 
 <body class="font-inter">
+    <!-- header container starts here -->
     <header class="w-full sm:w-11/12 mx-auto">
         <!-- navbar -->
         <div class="navbar bg-base-100 font-raleway ">
@@ -161,7 +159,78 @@
             </div>
         </div>
     </header>
-    <main></main>
+    <!-- header container ends here -->
+
+    <!-- main container starts here -->
+    <main class="mt-14 md:mt-20">
+        <!-- best offer section -->
+        <section>
+            <!-- best offer content -->
+            <div>
+                <h2 class="w-1/2 mx-auto text-center font-raleway text-3xl font-bold">
+                    Best offers for you
+                </h2>
+            </div>
+            
+            <!-- best offer cards -->
+            <div class="flex flex-col lg:flex-row justify-evenly gap-6 w-11/12 mx-auto mt-10">
+                <!-- card 1 -->
+                <div class="card flex-row justify-center items-center border w-11/12 mx-auto lg:w-[50%] rounded-3xl bg-card1-background">
+                    <div class="card-body">
+                        <h2 class="card-title font-bold text-3xl">
+                            15% OFF
+                        </h2>
+                        <p class="text-sm font-medium">
+                            on your next purchase
+
+                        </p>
+                        <p class="text-sm text-description">
+                            Registered users
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/cupon-devider.png" alt="coupon image" class="">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title font-bold text-3xl">
+                            NEW15
+                        </h2>
+                        <p class="text-sm text-description">
+                            Coupon Code
+                        </p>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="card flex-row justify-center items-center border w-11/12 mx-auto lg:w-[50%] rounded-3xl bg-card2-background">
+                    <div class="card-body">
+                        <h2 class="card-title font-bold text-3xl">
+                            20% OFF
+                        </h2>
+                        <p class="text-sm font-medium">
+                            on your next purchase
+                        </p>
+                        <p class="text-sm text-description">
+                            use by January 2024
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/cupon-devider.png" alt="coupon image" class="">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title font-bold text-3xl">
+                            Couple 20
+                        </h2>
+                        <p class="text-sm text-description">
+                            Coupon Code
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main container ends here -->
+
+    <!-- footer container starts here -->
     <footer class="bg-black mt-20">
         <!-- footer content -->
         <div class="w-11/12 mx-auto ">
@@ -202,6 +271,7 @@
             </div>
         </div>
     </footer>
+    <!-- footer container ends here -->
 </body>
 
 </html>
