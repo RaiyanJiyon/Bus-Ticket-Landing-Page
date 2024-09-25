@@ -55,11 +55,11 @@ const bookedSeat = getTextElementValueAsNumber('booked-seat');
 const seatButtons = document.querySelectorAll('.seat-btn');
 seatButtons.forEach(button => {
     button.addEventListener('click', () => {
-        button.classList.add('bg-[#1DD100]', 'text-white')
+        button.classList.add('bg-primary-color', 'text-white')
         console.log('click')
-    })
+    });
     button.addEventListener('dblclick', () => {
-        button.classList.remove('bg-[#1DD100]', 'text-white')
+        button.classList.remove('bg-primary-color', 'text-white')
         console.log('click')
-    })
-})
+    });
+});
