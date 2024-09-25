@@ -275,7 +275,7 @@
                         </div>
                         <button class="btn bg-[#1DD10026] text-primary-color mt-6 sm:mt-0">
                             <img src="images/seat-green.png" alt="seat png">
-                            40 Seats left
+                            <span id="total-seat">40</span>Seats left
                         </button>
                     </div>
 
@@ -515,7 +515,7 @@
                             <div class="border-dashed border border-[#03071233]"></div>
 
                             <!-- economy -->
-                            <div class="flex justify-between">
+                            <div class="hidden flex justify-between">
                                 <p class="text-raleway text-description">
                                     C2
                                 </p>
@@ -528,7 +528,7 @@
                             </div>
 
                             <!-- economy -->
-                            <div class="flex justify-between">
+                            <div class="hidden flex justify-between">
                                 <p class="text-raleway text-description">
                                     C2
                                 </p>
@@ -540,6 +540,10 @@
                                 </p>
                             </div>
 
+                            <h2 class="text-2xl text-red-400 font-bold">
+                                No seat Booked
+                            </h2>
+
                             <!-- dotted divider -->
                             <div class="border border-[#03071233]"></div>
 
@@ -549,17 +553,17 @@
                                     Total Price
                                 </h4>
                                 <h4 class="font-semibold">
-                                    BDT 1100
+                                    BDT: ****
                                 </h4>
                             </div>
 
                             <!-- coupon -->
                             <div class="grid grid-cols-3 justify-between gap-4">
                                 <label class="col-span-2 input input-bordered flex items-center gap-2">
-                                    <input type="text" class="grow text-xs placeholder-gray-400"
+                                    <input disabled type="text" class="grow text-xs placeholder-gray-400"
                                         placeholder="Have any coupon?" />
                                 </label>
-                                <button class="col-span-1 btn bg-primary-color text-white font-semibold">Apply</button>
+                                <button disabled class="col-span-1 btn bg-primary-color text-white font-semibold">Apply</button>
                             </div>
 
                             <!-- grand total -->
@@ -596,7 +600,7 @@
                                         class="input input-bordered w-full max-w-xs text-sm" />
                                 </label>
 
-                                <button
+                                <button disabled
                                     class="btn w-full bg-primary-color text-white font-bold rounded-2xl">Next</button>
 
                                 <div class="flex justify-between">
@@ -658,6 +662,10 @@
         </div>
     </footer>
     <!-- footer container ends here -->
+
+    <!-- link with external javascript file -->
+    <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
