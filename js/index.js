@@ -1,5 +1,30 @@
-const totalSeatElement = document.getElementById('total-seat');
-const bookedSeatElement = document.getElementById('booked-seat');
+let selectedSeat = 0;
+let maxSeat = 4;
+
+const seatButtons = document.querySelectorAll('.seat-btn');
+seatButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (!button.classList.contains('bg-primary-color', 'text-white')) {
+            if (selectedSeat < maxSeat) {
+                button.classList.add('bg-primary-color', 'text-white')
+
+                updateSeatCount(-1, +1);
+                selectedSeat++;
+            } else {
+                alert('Maximum seat added');
+            }
+        } else {
+            button.classList.remove('bg-primary-color', 'text-white');
+            
+            updateSeatCount(+1, -1);
+            selectedSeat--;
+        }
+    });
+});
+
+
+
+
 
 function updateSeatCount(totalChange, seatChange) {
     const totalSeat = getTextElementValueAsNumber('total-seat');
@@ -8,20 +33,3 @@ function updateSeatCount(totalChange, seatChange) {
     document.getElementById('total-seat').innerText = totalSeat + totalChange;
     document.getElementById('booked-seat').innerText = bookedSeat + seatChange;
 }
-
-const buttons = document.querySelectorAll('.seat-btn');
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        if (!button.classList.contains('bg-primary-color', 'text-white')) {
-            updateSeatCount(-1, +1);
-            button.classList.add('bg-primary-color', 'text-white');
-        }
-    });
-
-    button.addEventListener('dblclick', () => {
-        if (button.classList.contains('bg-primary-color', 'text-white')) {
-            updateSeatCount(+1, -1);
-            button.classList.remove('bg-primary-color', 'text-white');
-        }
-    });
-});
