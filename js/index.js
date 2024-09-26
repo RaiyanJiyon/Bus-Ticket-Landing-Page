@@ -21,6 +21,17 @@ seatButtons.forEach(button => {
                     couponInput.removeAttribute('disabled')
                     const applyBtn = document.getElementById('apply-btn');
                     applyBtn.removeAttribute('disabled')
+
+                    applyBtn.addEventListener('click', () => {
+                        const couponInputValue = getInputElementValue('coupon-input');
+                        console.log(couponInputValue)
+                        if (couponInputValue === 'NEW15' || couponInputValue === 'Couple 20') {
+                            const newDiscountedPrice = totalPrice - 330;
+                            console.log(newDiscountedPrice)
+                        } else {
+                            alert('Your Provided Coupon Code Is Not Valid 😕')
+                        }
+                    })
                 }
 
             } else {
@@ -55,4 +66,5 @@ function updateTotalPrice(change) {
     totalPrice += change;
     const totalTicketAmount = document.getElementById('total-ticket-amount');
     totalTicketAmount.innerText = totalPrice.toFixed(2);
+    return totalPrice;
 }
