@@ -548,10 +548,10 @@
                             <!-- coupon -->
                             <div class="grid grid-cols-3 justify-between gap-4">
                                 <label class="col-span-2 input input-bordered flex items-center gap-2">
-                                    <input disabled type="text" class="grow text-xs placeholder-gray-400"
+                                    <input id="coupon-input" disabled type="text" class="grow text-xs placeholder-gray-400"
                                         placeholder="Have any coupon?" />
                                 </label>
-                                <button disabled
+                                <button disabled id="apply-btn"
                                     class="col-span-1 btn bg-primary-color text-white font-semibold">Apply</button>
                             </div>
 
@@ -561,7 +561,7 @@
                                     Grand Total
                                 </h4>
                                 <h4 class="font-semibold">
-                                    BDT 1100
+                                    BDT <span id="grand-ticket-amount">****</span>
                                 </h4>
                             </div>
 

@@ -15,6 +15,14 @@ seatButtons.forEach(button => {
 
                 const noSeatMsg = document.getElementById('no-seat-msg');
                 noSeatMsg.classList.add('hidden');
+
+                if (selectedSeat === 4) {
+                    const couponInput = document.getElementById('coupon-input');
+                    couponInput.removeAttribute('disabled')
+                    const applyBtn = document.getElementById('apply-btn');
+                    applyBtn.removeAttribute('disabled')
+                }
+
             } else {
                 alert('Maximum seat added');
             }
