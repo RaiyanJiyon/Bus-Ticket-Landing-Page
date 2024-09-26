@@ -501,7 +501,8 @@
                             <!-- seat -->
                             <div class="flex justify-between">
                                 <h4 class="font-semibold">
-                                    Seat <sup id="booked-seat" class="w-6 h-4 p-1 rounded-md bg-primary-color text-white">0</sup>
+                                    Seat <sup id="booked-seat"
+                                        class="w-6 h-4 p-1 rounded-md bg-primary-color text-white">0</sup>
                                 </h4>
                                 <h4 class="font-semibold">
                                     Class
@@ -515,8 +516,8 @@
                             <div class="border-dashed border border-[#03071233]"></div>
 
                             <!-- economy -->
-                            <div class="hidden flex justify-between">
-                                <p class="text-raleway text-description">
+                            <div id="economy" class="hidden flex justify-between">
+                                <!-- <p class="text-raleway text-description">
                                     C2
                                 </p>
                                 <p class="text-raleway text-description">
@@ -524,23 +525,10 @@
                                 </p>
                                 <p class="text-raleway text-description">
                                     550
-                                </p>
+                                </p> -->
                             </div>
 
-                            <!-- economy -->
-                            <div class="hidden flex justify-between">
-                                <p class="text-raleway text-description">
-                                    C2
-                                </p>
-                                <p class="text-raleway text-description">
-                                    Economy
-                                </p>
-                                <p class="text-raleway text-description">
-                                    550
-                                </p>
-                            </div>
-
-                            <h2 class="text-2xl text-red-400 font-bold">
+                            <h2 id="no-seat-msg" class="text-2xl text-red-400 font-bold">
                                 No seat Booked
                             </h2>
 
@@ -553,7 +541,7 @@
                                     Total Price
                                 </h4>
                                 <h4 class="font-semibold">
-                                    BDT: ****
+                                    BDT: <span id="total-ticket-amount">****</span>
                                 </h4>
                             </div>
 
@@ -563,7 +551,8 @@
                                     <input disabled type="text" class="grow text-xs placeholder-gray-400"
                                         placeholder="Have any coupon?" />
                                 </label>
-                                <button disabled class="col-span-1 btn bg-primary-color text-white font-semibold">Apply</button>
+                                <button disabled
+                                    class="col-span-1 btn bg-primary-color text-white font-semibold">Apply</button>
                             </div>
 
                             <!-- grand total -->
