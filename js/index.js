@@ -28,10 +28,17 @@ seatButtons.forEach(button => {
             }
         } else {
             button.classList.remove('bg-primary-color', 'text-white');
-            
+
             updateSeatCount(+1, -1);
             updateTotalPrice(-550);
             selectedSeat--;
+
+            if (selectedSeat < 4) {
+                const couponInput = document.getElementById('coupon-input');
+                couponInput.setAttribute('disabled', true)
+                const applyBtn = document.getElementById('apply-btn');
+                applyBtn.setAttribute('disabled', true)
+            }
         }
     });
 });
