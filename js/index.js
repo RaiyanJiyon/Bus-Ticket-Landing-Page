@@ -50,6 +50,11 @@ seatButtons.forEach(button => {
                 const applyBtn = document.getElementById('apply-btn');
                 applyBtn.setAttribute('disabled', true)
             }
+
+            if (selectedSeat === 0) {
+                const noSeatMsg = document.getElementById('no-seat-msg');
+                noSeatMsg.classList.remove('hidden');
+            }
         }
     });
 });
