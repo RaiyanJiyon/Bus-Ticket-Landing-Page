@@ -5,6 +5,8 @@ let totalPrice = 0;
 const seatButtons = document.querySelectorAll('.seat-btn');
 seatButtons.forEach(button => {
     button.addEventListener('click', () => {
+        const grandTicketAmountElement = document.getElementById('grand-ticket-amount');
+
         if (!button.classList.contains('bg-primary-color', 'text-white')) {
             if (selectedSeat < maxSeat) {
                 button.classList.add('bg-primary-color', 'text-white')
@@ -24,37 +26,41 @@ seatButtons.forEach(button => {
 
                     applyBtn.addEventListener('click', () => {
                         const couponInputValue = getInputElementValue('coupon-input');
-                        console.log(couponInputValue)
+
                         if (couponInputValue === 'NEW15' || couponInputValue === 'Couple 20') {
                             const newDiscountedPrice = totalPrice - 330;
-                            console.log(newDiscountedPrice)
+                            console.log(newDiscountedPrice);
+
+                            grandTicketAmountElement.innerText = newDiscountedPrice.toFixed(2);
                         } else {
                             alert('Your Provided Coupon Code Is Not Valid 😕')
                         }
                     })
                 }
-
+                
             } else {
                 alert('Maximum seat added');
             }
         } else {
             button.classList.remove('bg-primary-color', 'text-white');
-
+            
             updateSeatCount(+1, -1);
             updateTotalPrice(-550);
             selectedSeat--;
-
+            
             if (selectedSeat < 4) {
                 const couponInput = document.getElementById('coupon-input');
                 couponInput.setAttribute('disabled', true)
                 const applyBtn = document.getElementById('apply-btn');
                 applyBtn.setAttribute('disabled', true)
             }
-
+            
             if (selectedSeat === 0) {
                 const noSeatMsg = document.getElementById('no-seat-msg');
                 noSeatMsg.classList.remove('hidden');
             }
+
+            grandTicketAmountElement.innerText = "****";
         }
     });
 });

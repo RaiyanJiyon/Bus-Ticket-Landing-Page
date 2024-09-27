@@ -14,3 +14,8 @@ function getTextElementValueAsNumber(id) {
     const textValueAsNumber = Number(textElementValue);
     return textValueAsNumber;
 }
+
+function getTextElementValue(id) {
+    const textElementValue = document.getElementById(id).innerText;
+    return textElementValue;
+}
