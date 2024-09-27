@@ -6,61 +6,62 @@ const seatButtons = document.querySelectorAll('.seat-btn');
 seatButtons.forEach(button => {
     button.addEventListener('click', () => {
         const grandTicketAmountElement = document.getElementById('grand-ticket-amount');
+        const couponInput = document.getElementById('coupon-input');
+        const applyBtn = document.getElementById('apply-btn');
+        const couponInputLeval = document.getElementById('coupon-input-leval');
+        const noSeatMsg = document.getElementById('no-seat-msg');
 
         if (!button.classList.contains('bg-primary-color', 'text-white')) {
             if (selectedSeat < maxSeat) {
-                button.classList.add('bg-primary-color', 'text-white')
+                button.classList.add('bg-primary-color', 'text-white');
 
                 updateSeatCount(-1, +1);
                 updateTotalPrice(550);
                 selectedSeat++;
 
-                const noSeatMsg = document.getElementById('no-seat-msg');
                 noSeatMsg.classList.add('hidden');
 
                 if (selectedSeat === 4) {
-                    const couponInput = document.getElementById('coupon-input');
-                    couponInput.removeAttribute('disabled')
-                    const applyBtn = document.getElementById('apply-btn');
-                    applyBtn.removeAttribute('disabled')
+                    couponInput.removeAttribute('disabled');
+                    applyBtn.removeAttribute('disabled');
 
                     applyBtn.addEventListener('click', () => {
                         const couponInputValue = getInputElementValue('coupon-input');
 
                         if (couponInputValue === 'NEW15' || couponInputValue === 'Couple 20') {
                             const newDiscountedPrice = totalPrice - 330;
-                            console.log(newDiscountedPrice);
-
                             grandTicketAmountElement.innerText = newDiscountedPrice.toFixed(2);
+
+                            couponInputLeval.classList.add('hidden');
+                            applyBtn.classList.add('hidden');
                         } else {
-                            alert('Your Provided Coupon Code Is Not Valid 😕')
+                            alert('Your Provided Coupon Code Is Not Valid 😕');
                         }
-                    })
+                    });
                 }
-                
             } else {
                 alert('Maximum seat added');
             }
         } else {
             button.classList.remove('bg-primary-color', 'text-white');
-            
+
             updateSeatCount(+1, -1);
             updateTotalPrice(-550);
             selectedSeat--;
-            
+
             if (selectedSeat < 4) {
-                const couponInput = document.getElementById('coupon-input');
-                couponInput.setAttribute('disabled', true)
-                const applyBtn = document.getElementById('apply-btn');
-                applyBtn.setAttribute('disabled', true)
+                couponInput.setAttribute('disabled', true);
+                applyBtn.setAttribute('disabled', true);
             }
-            
+
             if (selectedSeat === 0) {
-                const noSeatMsg = document.getElementById('no-seat-msg');
                 noSeatMsg.classList.remove('hidden');
             }
 
             grandTicketAmountElement.innerText = "****";
+            couponInputLeval.classList.remove('hidden');
+            couponInputLeval.textContent = "";
+            applyBtn.classList.remove('hidden');
         }
     });
 });
