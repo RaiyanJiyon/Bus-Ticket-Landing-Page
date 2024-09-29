@@ -8,7 +8,7 @@ seatButtons.forEach(button => {
         const grandTicketAmountElement = document.getElementById('grand-ticket-amount');
         const couponInput = document.getElementById('coupon-input');
         const applyBtn = document.getElementById('apply-btn');
-        const couponInputLeval = document.getElementById('coupon-input-leval');
+        const couponInputLaval = document.getElementById('coupon-input-laval');
         const noSeatMsg = document.getElementById('no-seat-msg');
 
         if (!button.classList.contains('bg-primary-color', 'text-white')) {
@@ -32,7 +32,7 @@ seatButtons.forEach(button => {
                             const newDiscountedPrice = totalPrice - 330;
                             grandTicketAmountElement.innerText = newDiscountedPrice.toFixed(2);
 
-                            couponInputLeval.classList.add('hidden');
+                            couponInputLaval.classList.add('hidden');
                             applyBtn.classList.add('hidden');
                         } else {
                             alert('Your Provided Coupon Code Is Not Valid 😕');
@@ -59,8 +59,8 @@ seatButtons.forEach(button => {
             }
 
             grandTicketAmountElement.innerText = "****";
-            couponInputLeval.classList.remove('hidden');
-            couponInputLeval.textContent = "";
+            couponInputLaval.classList.remove('hidden');
+            couponInputLaval.textContent = "";
             applyBtn.classList.remove('hidden');
         }
     });
