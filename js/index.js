@@ -74,17 +74,6 @@ seatButtons.forEach(button => {
                             const discountPrice = document.getElementById('discount-price');
                             discountPrice.classList.remove('hidden');
 
-                            const discountHeading1 = document.createElement('h4');
-                            discountHeading1.classList.add('font-semibold');
-                            discountHeading1.textContent = 'Discount';
-
-                            const discountHeading2 = document.createElement('h4');
-                            discountHeading2.classList.add('font-semibold');
-                            discountHeading2.textContent = '- BDT: 330.00';
-
-                            discountPrice.appendChild(discountHeading1);
-                            discountPrice.appendChild(discountHeading2);
-
                             couponInputLaval.classList.add('hidden');
                             applyBtn.classList.add('hidden');
                         } else {
