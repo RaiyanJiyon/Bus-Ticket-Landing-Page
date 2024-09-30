@@ -153,3 +153,15 @@ function getTextElementValueAsNumber(id) {
     const element = document.getElementById(id);
     return parseInt(element.innerText) || 0;
 }
+
+document.getElementById('next-btn').addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Check if at least one seat is selected
+    if (selectedSeat > 0) {
+        const displayModal = document.getElementById('my_modal_1');
+        displayModal.showModal();
+    } else {
+        alert('Please select at least one seat before proceeding.');
+    }
+});

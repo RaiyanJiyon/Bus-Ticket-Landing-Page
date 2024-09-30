@@ -547,14 +547,15 @@
 
                             <!-- discount price -->
                             <div id="discount-price" class="hidden flex justify-between">
-                                
+
                             </div>
 
                             <!-- coupon -->
                             <div class="grid grid-cols-3 justify-between gap-4">
-                                <label id="coupon-input-laval" class="col-span-2 input input-bordered flex items-center gap-2">
-                                    <input id="coupon-input" disabled type="text" class="grow text-xs placeholder-gray-400"
-                                        placeholder="Have any coupon?" />
+                                <label id="coupon-input-laval"
+                                    class="col-span-2 input input-bordered flex items-center gap-2">
+                                    <input id="coupon-input" disabled type="text"
+                                        class="grow text-xs placeholder-gray-400" placeholder="Have any coupon?" />
                                 </label>
                                 <button disabled id="apply-btn"
                                     class="col-span-1 btn bg-primary-color text-white font-semibold">Apply</button>
@@ -577,24 +578,24 @@
                                         <span class="label-text font-bold">Passenger Name*</span>
                                     </div>
                                     <input type="text" placeholder="Enter your name"
-                                        class="input input-bordered w-full max-w-xs" />
+                                        class="input input-bordered w-full max-w-xs" required />
                                 </label>
                                 <label class="form-control w-full max-w-xs text-sm">
                                     <div class="label">
                                         <span class="label-text font-bold">Phone Number*</span>
                                     </div>
-                                    <input id="phone-number" type="text" placeholder="Enter your phone number"
-                                        class="input input-bordered w-full max-w-xs text-sm" />
+                                    <input id="phone-number" type="number" placeholder="Enter your phone number"
+                                        class="input input-bordered w-full max-w-xs text-sm" required />
                                 </label>
                                 <label class="form-control w-full max-w-xs">
                                     <div class="label">
                                         <span class="label-text font-bold">Email ID</span>
                                     </div>
-                                    <input type="text" placeholder="Enter your email id"
-                                        class="input input-bordered w-full max-w-xs text-sm" />
+                                    <input type="email" placeholder="Enter your email id"
+                                        class="input input-bordered w-full max-w-xs text-sm" required />
                                 </label>
 
-                                <button disabled id="next-btn"
+                                <button id="next-btn"
                                     class="btn w-full bg-primary-color text-white font-bold rounded-2xl">Next</button>
 
                                 <div class="flex justify-between">
@@ -657,8 +658,27 @@
     </footer>
     <!-- footer container ends here -->
 
+    <!-- modal code -->
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+            <h2 class="text-2xl font-bold text-center text-primary-color mt-10">Congratulations</h2>
+            <h3 class="text-xl font-bold text-center mt-6">
+                Thank you for booking our bus seats. We are working hard to find the best Service and deals for you.
+            </h3>
+            <p class="text-center text-[#111111B3] font-bold mt-6">
+                Shortly you will find a confirmation in your email
+            </p>
+            <div class="modal-action flex justify-center">
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn bg-primary-color text-white font-bold">Continue</button>
+                    </form>
+                </div>
+            </div>
+    </dialog>
+
     <!-- link with external javascript file -->
-    <script src="./js/utilities.js"></script>
+    <!-- <script src="./js/utilities.js"></script> -->
     <script src="./js/index.js"></script>
 </body>
 
